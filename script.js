@@ -1,13 +1,26 @@
 const container = document.querySelector(".container");
+const btn = document.querySelector(".btn");
 
-createGrid(4);
+createGrid(64);
+
+btn.addEventListener("click", () => {
+    let size = prompt("Size");
+    while (size === undefined || (size > 100) || (size < 1)) {
+        size = prompt('Re-enter valid size:');
+        if ((size > 0) && (size < 101)) {
+            break;
+        }
+    }
+    clearGrid();
+    createGrid(size);
+})
 
 container.addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = "black";
 })
 
 function createGrid(size) {
-    let square_size = Math.floor(400 / size);
+    let square_size = 400 / size;
     for (let i = 0; i < size; i++) {
         const line = document.createElement("div");
         line.classList.add("line");
@@ -19,4 +32,12 @@ function createGrid(size) {
             line.appendChild(square);
         }
     }
+}
+
+function clearGrid() {
+    const lines = document.querySelectorAll(".line");
+    const squares = document.querySelectorAll(".square");
+    lines.forEach((line) => {
+        container.removeChild(line);
+    })
 }
