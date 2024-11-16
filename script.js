@@ -5,9 +5,15 @@ createGrid(64);
 
 btn.addEventListener("click", () => {
     let size = prompt("Size");
+    if (size === null) {
+        return;
+    }
     while (size === undefined || (size > 100) || (size < 1)) {
         size = prompt('Re-enter valid size:');
-        if ((size > 0) && (size < 101)) {
+        if (size === null) {
+            return;
+        }
+        else if ((size > 0) && (size < 101)) {
             break;
         }
     }
