@@ -19,10 +19,7 @@ body {
 }
 
 .square {
-    margin: 1px;
     background-color: white;
-    border: 2px solid black;
-    border-radius: 35%;
 }
 
 .line {
@@ -46,5 +43,4 @@ body {
     border: 4px solid black;
     height: 400px;
     width: 400px;
-    padding: 1px;
 }
