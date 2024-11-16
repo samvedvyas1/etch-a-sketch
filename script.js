@@ -23,6 +23,7 @@ btn.addEventListener("click", () => {
 
 container.addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = "black";
+    console.log(e.target);
 })
 
 function createGrid(size) {
