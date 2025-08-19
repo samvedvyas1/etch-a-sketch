@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>etch-a-sketch</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="title">Etch-a-Sketch</div>
-    <div class="body">
-        <button class="btn">Size</button>
+    <h1 class="title">Etch-a-Sketch</h1>
+    <div class="main-content">
+        <div class="controls">
+            <input type="color" id="colorPicker" value="#000000">
+            <button id="colorBtn" class="btn active">Color Mode</button>
+            <button id="rainbowBtn" class="btn">Rainbow Mode</button>
+            <button id="eraserBtn" class="btn">Eraser</button>
+            <button id="clearBtn" class="btn">Clear</button>
+            <div class="size-slider">
+                <div id="sizeValue">16 x 16</div>
+                <input type="range" id="sizeSlider" value="16" min="1" max="64">
+            </div>
+        </div>
         <div class="container"></div>
     </div>
 </body>
